@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PassiveLearningBl.Model;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -7,8 +8,8 @@ namespace PassiveLearningBl.Controller
 {
     public class QuestionController
     {
-        protected List<QuestionsGroup> QuestionsGroups { get; set; }
-        public double Delay { get; set; } // Seconds
+        public List<QuestionsGroup> QuestionsGroups { get; set; }
+        public double Delay { get; set; } = 3000; // Seconds
         public event EventHandler<QuestionEventArgs> DisplayQuestion;
 
         private bool IsActive { get => !Token.IsCancellationRequested; }
@@ -18,7 +19,7 @@ namespace PassiveLearningBl.Controller
 
         public QuestionController()
         {
-
+            QuestionsGroups = new List<QuestionsGroup>();
         }
         public QuestionController(List<QuestionsGroup> questionsGroups)
         {

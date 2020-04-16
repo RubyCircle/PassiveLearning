@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.buttonRemoveQuestion = new System.Windows.Forms.Button();
+            this.buttonAddQuestion = new System.Windows.Forms.Button();
+            this.listBoxQuestions = new System.Windows.Forms.ListBox();
+            this.buttonRemoveGroup = new System.Windows.Forms.Button();
+            this.buttonAddGroup = new System.Windows.Forms.Button();
             this.listBoxQuestionGroups = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listBoxQuestions = new System.Windows.Forms.ListBox();
-            this.buttonAddGroup = new System.Windows.Forms.Button();
-            this.buttonAddQuestion = new System.Windows.Forms.Button();
-            this.buttonRemoveGroup = new System.Windows.Forms.Button();
-            this.buttonRemoveQuestion = new System.Windows.Forms.Button();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addQuestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeQuestionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -67,6 +70,63 @@
             this.splitContainer.SplitterDistance = 633;
             this.splitContainer.TabIndex = 0;
             // 
+            // buttonRemoveQuestion
+            // 
+            this.buttonRemoveQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRemoveQuestion.Location = new System.Drawing.Point(468, 400);
+            this.buttonRemoveQuestion.Name = "buttonRemoveQuestion";
+            this.buttonRemoveQuestion.Size = new System.Drawing.Size(75, 23);
+            this.buttonRemoveQuestion.TabIndex = 2;
+            this.buttonRemoveQuestion.Text = "Remove";
+            this.buttonRemoveQuestion.UseVisualStyleBackColor = true;
+            this.buttonRemoveQuestion.Click += new System.EventHandler(this.RemoveQuestion_Click);
+            // 
+            // buttonAddQuestion
+            // 
+            this.buttonAddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddQuestion.Location = new System.Drawing.Point(549, 400);
+            this.buttonAddQuestion.Name = "buttonAddQuestion";
+            this.buttonAddQuestion.Size = new System.Drawing.Size(79, 23);
+            this.buttonAddQuestion.TabIndex = 1;
+            this.buttonAddQuestion.Text = "Add";
+            this.buttonAddQuestion.UseVisualStyleBackColor = true;
+            this.buttonAddQuestion.Click += new System.EventHandler(this.AddQuestion_Click);
+            // 
+            // listBoxQuestions
+            // 
+            this.listBoxQuestions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxQuestions.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.listBoxQuestions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxQuestions.FormattingEnabled = true;
+            this.listBoxQuestions.Location = new System.Drawing.Point(3, 5);
+            this.listBoxQuestions.Name = "listBoxQuestions";
+            this.listBoxQuestions.Size = new System.Drawing.Size(627, 392);
+            this.listBoxQuestions.TabIndex = 0;
+            // 
+            // buttonRemoveGroup
+            // 
+            this.buttonRemoveGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRemoveGroup.Location = new System.Drawing.Point(6, 400);
+            this.buttonRemoveGroup.Name = "buttonRemoveGroup";
+            this.buttonRemoveGroup.Size = new System.Drawing.Size(75, 23);
+            this.buttonRemoveGroup.TabIndex = 3;
+            this.buttonRemoveGroup.Text = "Remove";
+            this.buttonRemoveGroup.UseVisualStyleBackColor = true;
+            this.buttonRemoveGroup.Click += new System.EventHandler(this.RemoveGroup_Click);
+            // 
+            // buttonAddGroup
+            // 
+            this.buttonAddGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddGroup.Location = new System.Drawing.Point(85, 400);
+            this.buttonAddGroup.Name = "buttonAddGroup";
+            this.buttonAddGroup.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddGroup.TabIndex = 2;
+            this.buttonAddGroup.Text = "Add";
+            this.buttonAddGroup.UseVisualStyleBackColor = true;
+            this.buttonAddGroup.Click += new System.EventHandler(this.AddGroup_Click);
+            // 
             // listBoxQuestionGroups
             // 
             this.listBoxQuestionGroups.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -79,6 +139,7 @@
             this.listBoxQuestionGroups.Name = "listBoxQuestionGroups";
             this.listBoxQuestionGroups.Size = new System.Drawing.Size(160, 392);
             this.listBoxQuestionGroups.TabIndex = 0;
+            this.listBoxQuestionGroups.SelectedValueChanged += new System.EventHandler(this.listBoxQuestionGroups_SelectedValueChanged);
             // 
             // menuStrip1
             // 
@@ -100,69 +161,41 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem});
+            this.addToolStripMenuItem,
+            this.removeGroupToolStripMenuItem,
+            this.addQuestionToolStripMenuItem,
+            this.removeQuestionToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // listBoxQuestions
-            // 
-            this.listBoxQuestions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBoxQuestions.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.listBoxQuestions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBoxQuestions.FormattingEnabled = true;
-            this.listBoxQuestions.Location = new System.Drawing.Point(3, 5);
-            this.listBoxQuestions.Name = "listBoxQuestions";
-            this.listBoxQuestions.Size = new System.Drawing.Size(627, 392);
-            this.listBoxQuestions.TabIndex = 0;
-            // 
-            // buttonAddGroup
-            // 
-            this.buttonAddGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddGroup.Location = new System.Drawing.Point(85, 400);
-            this.buttonAddGroup.Name = "buttonAddGroup";
-            this.buttonAddGroup.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddGroup.TabIndex = 2;
-            this.buttonAddGroup.Text = "Add";
-            this.buttonAddGroup.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddQuestion
-            // 
-            this.buttonAddQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddQuestion.Location = new System.Drawing.Point(549, 400);
-            this.buttonAddQuestion.Name = "buttonAddQuestion";
-            this.buttonAddQuestion.Size = new System.Drawing.Size(79, 23);
-            this.buttonAddQuestion.TabIndex = 1;
-            this.buttonAddQuestion.Text = "Add";
-            this.buttonAddQuestion.UseVisualStyleBackColor = true;
-            // 
-            // buttonRemoveGroup
-            // 
-            this.buttonRemoveGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRemoveGroup.Location = new System.Drawing.Point(6, 400);
-            this.buttonRemoveGroup.Name = "buttonRemoveGroup";
-            this.buttonRemoveGroup.Size = new System.Drawing.Size(75, 23);
-            this.buttonRemoveGroup.TabIndex = 3;
-            this.buttonRemoveGroup.Text = "Remove";
-            this.buttonRemoveGroup.UseVisualStyleBackColor = true;
-            // 
-            // buttonRemoveQuestion
-            // 
-            this.buttonRemoveQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRemoveQuestion.Location = new System.Drawing.Point(468, 400);
-            this.buttonRemoveQuestion.Name = "buttonRemoveQuestion";
-            this.buttonRemoveQuestion.Size = new System.Drawing.Size(75, 23);
-            this.buttonRemoveQuestion.TabIndex = 2;
-            this.buttonRemoveQuestion.Text = "Remove";
-            this.buttonRemoveQuestion.UseVisualStyleBackColor = true;
             // 
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
             this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.addToolStripMenuItem.Text = "Add";
+            this.addToolStripMenuItem.Text = "Add Group";
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.AddGroup_Click);
+            // 
+            // removeGroupToolStripMenuItem
+            // 
+            this.removeGroupToolStripMenuItem.Name = "removeGroupToolStripMenuItem";
+            this.removeGroupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeGroupToolStripMenuItem.Text = "Remove Group";
+            this.removeGroupToolStripMenuItem.Click += new System.EventHandler(this.RemoveGroup_Click);
+            // 
+            // addQuestionToolStripMenuItem
+            // 
+            this.addQuestionToolStripMenuItem.Name = "addQuestionToolStripMenuItem";
+            this.addQuestionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addQuestionToolStripMenuItem.Text = "Add Question";
+            this.addQuestionToolStripMenuItem.Click += new System.EventHandler(this.AddQuestion_Click);
+            // 
+            // removeQuestionToolStripMenuItem
+            // 
+            this.removeQuestionToolStripMenuItem.Name = "removeQuestionToolStripMenuItem";
+            this.removeQuestionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeQuestionToolStripMenuItem.Text = "Remove Question";
+            this.removeQuestionToolStripMenuItem.Click += new System.EventHandler(this.RemoveQuestion_Click);
             // 
             // Main
             // 
@@ -197,6 +230,9 @@
         private System.Windows.Forms.Button buttonRemoveGroup;
         private System.Windows.Forms.Button buttonAddGroup;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeGroupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addQuestionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeQuestionToolStripMenuItem;
     }
 }
 

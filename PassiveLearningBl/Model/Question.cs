@@ -1,27 +1,27 @@
 ﻿using System.Collections.Generic;
 
-namespace PassiveLearningBl
+namespace PassiveLearningBl.Model
 {
     public class Question
     {
         public string QuestionText { get; set; }
-        public List<(string Text, bool IsCorrect)> Answers { get; set; }
+        public List<(string Text, bool IsCorrect)> Answer { get; set; }
         public bool IsActive { get; set; } = true;
 
-        public Question(string questionText, List<(string Text, bool IsCorrect)> answers, bool active = true)
+        public Question(string questionText, List<(string Text, bool IsCorrect)> answer, bool active = true)
         {
             IsActive = active;
             if (string.IsNullOrWhiteSpace(questionText))           
                 throw new System.ArgumentException("Question is not set", nameof(questionText)); 
             
             QuestionText = questionText;
-            Answers = answers ?? throw new System.ArgumentNullException(nameof(answers));
+            Answer = answer ?? throw new System.ArgumentNullException(nameof(Answer));
         }
 
         public override string ToString()
         {
             string result = "";
-            foreach (var (Text, _) in Answers)
+            foreach (var (Text, _) in Answer)
             {
                 result += Text + " ";
             }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PassiveLearningBl
+namespace PassiveLearningBl.Model
 {
     public class QuestionsGroup
     {
@@ -22,12 +22,7 @@ namespace PassiveLearningBl
 
         public override string ToString()
         {
-            var result = "";
-            foreach (var question in Questions)
-            {
-                result += question.ToString() + "\n";
-            }
-            return result;
+            return GroupName;
         }
         public override bool Equals(object obj)
         {

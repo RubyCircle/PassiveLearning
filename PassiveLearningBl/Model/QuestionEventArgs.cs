@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PassiveLearningBl.Controller
+namespace PassiveLearningBl.Model
 {
     public class QuestionEventArgs : EventArgs
     {
