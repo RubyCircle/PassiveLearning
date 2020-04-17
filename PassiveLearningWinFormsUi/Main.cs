@@ -23,13 +23,17 @@ namespace PassiveLearningWinFormsUi
             {
                 new Question("test1", new List<(string Text, bool IsCorrect)>()
                 {
-                   ("ff1", true),
-                   ("df1", false)
+                   ("f1", true),
+                   ("d1", false),
+                   ("d2", false),
+                   ("d3", false),
                 }),
                 new Question("test2", new List<(string Text, bool IsCorrect)>()
                 {
-                   ("f2f", true),
-                   ("df2", false)
+                   ("f1", true),
+                   ("f2", false),
+                   ("f3", false),
+                   ("f4", false),
                 })
             };
             var testQuestions2 = new List<Question>()
@@ -37,12 +41,16 @@ namespace PassiveLearningWinFormsUi
                 new Question("test", new List<(string Text, bool IsCorrect)>()
                 {
                    ("yes", true),
-                   ("no", false)
+                   ("no", false),
+                   ("no/yes", false),
+                   ("?", false)
                 }),
                 new Question("2+2", new List<(string Text, bool IsCorrect)>()
                 {
                    ("4", true),
-                   ("5", false)
+                   ("5", false),
+                   ("1", false),
+                   ("0", false),
                 })
             };
             var testGroup = new List<QuestionsGroup>()
@@ -50,20 +58,33 @@ namespace PassiveLearningWinFormsUi
                 new QuestionsGroup("test1",testQuestions1),
                 new QuestionsGroup("test2",testQuestions2)
             };
-            QuestionController = new QuestionController(testGroup); // TODO: добавить выгрузку
+            QuestionController = new QuestionController(testGroup,10); // TODO: добавить выгрузку
             foreach (var group in QuestionController.QuestionsGroups)
             {
                 listBoxQuestionGroups.Items.Add(group);
             }
+            QuestionController.DisplayQuestion += OnDisplayQuestion;
+            QuestionController.Start();
         }
 
-        private void listBoxQuestionGroups_SelectedValueChanged(object sender, EventArgs e)
+        private void OnDisplayQuestion(object sender, PassiveLearningBl.Model.QuestionEventArgs e)
         {
-            listBoxQuestions.Items.Clear();
-
-            if(listBoxQuestionGroups.SelectedItem is QuestionsGroup group)
+            var questionBoxForm = new QuestionBoxForm(e.Question);
+            questionBoxForm.ShowDialog();
+            if (questionBoxForm.DialogResult == DialogResult.OK)
             {
-                DisplayQuestions(group);
+                if(questionBoxForm.IsCorrect)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
             }
         }
 
@@ -119,6 +140,16 @@ namespace PassiveLearningWinFormsUi
                     QuestionController.RemoveQuestion(question, group);
                     listBoxQuestions.Items.Remove(question);
                 }
+            }
+        }
+
+        private void ListBoxQuestionGroups_SelectedValueChanged(object sender, EventArgs e)
+        {
+            listBoxQuestions.Items.Clear();
+
+            if (listBoxQuestionGroups.SelectedItem is QuestionsGroup group)
+            {
+                DisplayQuestions(group);
             }
         }
     }

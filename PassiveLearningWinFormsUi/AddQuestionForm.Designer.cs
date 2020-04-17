@@ -30,21 +30,21 @@
         {
             this.textBoxQuestionText = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.labelAnswer4 = new System.Windows.Forms.Label();
+            this.labelAnswer1 = new System.Windows.Forms.Label();
+            this.labelAnswer2 = new System.Windows.Forms.Label();
+            this.labelAnswer3 = new System.Windows.Forms.Label();
             this.labelQuestionText = new System.Windows.Forms.Label();
+            this.checkBoxIsCorrectAnswer1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxIsCorrectAnswer3 = new System.Windows.Forms.CheckBox();
+            this.checkBoxIsCorrectAnswer4 = new System.Windows.Forms.CheckBox();
+            this.checkBoxIsCorrectAnswer2 = new System.Windows.Forms.CheckBox();
+            this.textBoxAnswer4 = new System.Windows.Forms.TextBox();
+            this.textBoxAnswer3 = new System.Windows.Forms.TextBox();
+            this.textBoxAnswer1 = new System.Windows.Forms.TextBox();
+            this.textBoxAnswer2 = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.labelAnswer2 = new System.Windows.Forms.Label();
-            this.textBoxAnswer2 = new System.Windows.Forms.TextBox();
-            this.labelAnswer1 = new System.Windows.Forms.Label();
-            this.textBoxAnswer1 = new System.Windows.Forms.TextBox();
-            this.labelAnswer3 = new System.Windows.Forms.Label();
-            this.textBoxAnswer3 = new System.Windows.Forms.TextBox();
-            this.labelAnswer4 = new System.Windows.Forms.Label();
-            this.textBoxAnswer4 = new System.Windows.Forms.TextBox();
-            this.checkBoxIsCorrectAnswer2 = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsCorrectAnswer4 = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsCorrectAnswer3 = new System.Windows.Forms.CheckBox();
-            this.checkBoxIsCorrectAnswer1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -91,6 +91,42 @@
             this.splitContainer1.SplitterDistance = 71;
             this.splitContainer1.TabIndex = 1;
             // 
+            // labelAnswer4
+            // 
+            this.labelAnswer4.AutoSize = true;
+            this.labelAnswer4.Location = new System.Drawing.Point(3, 119);
+            this.labelAnswer4.Name = "labelAnswer4";
+            this.labelAnswer4.Size = new System.Drawing.Size(51, 13);
+            this.labelAnswer4.TabIndex = 7;
+            this.labelAnswer4.Text = "Answer 4";
+            // 
+            // labelAnswer1
+            // 
+            this.labelAnswer1.AutoSize = true;
+            this.labelAnswer1.Location = new System.Drawing.Point(3, 38);
+            this.labelAnswer1.Name = "labelAnswer1";
+            this.labelAnswer1.Size = new System.Drawing.Size(51, 13);
+            this.labelAnswer1.TabIndex = 3;
+            this.labelAnswer1.Text = "Answer 1";
+            // 
+            // labelAnswer2
+            // 
+            this.labelAnswer2.AutoSize = true;
+            this.labelAnswer2.Location = new System.Drawing.Point(3, 67);
+            this.labelAnswer2.Name = "labelAnswer2";
+            this.labelAnswer2.Size = new System.Drawing.Size(51, 13);
+            this.labelAnswer2.TabIndex = 1;
+            this.labelAnswer2.Text = "Answer 2";
+            // 
+            // labelAnswer3
+            // 
+            this.labelAnswer3.AutoSize = true;
+            this.labelAnswer3.Location = new System.Drawing.Point(3, 93);
+            this.labelAnswer3.Name = "labelAnswer3";
+            this.labelAnswer3.Size = new System.Drawing.Size(51, 13);
+            this.labelAnswer3.TabIndex = 5;
+            this.labelAnswer3.Text = "Answer 3";
+            // 
             // labelQuestionText
             // 
             this.labelQuestionText.AutoSize = true;
@@ -99,6 +135,86 @@
             this.labelQuestionText.Size = new System.Drawing.Size(49, 13);
             this.labelQuestionText.TabIndex = 0;
             this.labelQuestionText.Text = "Question";
+            // 
+            // checkBoxIsCorrectAnswer1
+            // 
+            this.checkBoxIsCorrectAnswer1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.checkBoxIsCorrectAnswer1.AutoSize = true;
+            this.checkBoxIsCorrectAnswer1.Location = new System.Drawing.Point(263, 40);
+            this.checkBoxIsCorrectAnswer1.Name = "checkBoxIsCorrectAnswer1";
+            this.checkBoxIsCorrectAnswer1.Size = new System.Drawing.Size(68, 17);
+            this.checkBoxIsCorrectAnswer1.TabIndex = 12;
+            this.checkBoxIsCorrectAnswer1.Text = "IsCorrect";
+            this.checkBoxIsCorrectAnswer1.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxIsCorrectAnswer3
+            // 
+            this.checkBoxIsCorrectAnswer3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.checkBoxIsCorrectAnswer3.AutoSize = true;
+            this.checkBoxIsCorrectAnswer3.Location = new System.Drawing.Point(263, 92);
+            this.checkBoxIsCorrectAnswer3.Name = "checkBoxIsCorrectAnswer3";
+            this.checkBoxIsCorrectAnswer3.Size = new System.Drawing.Size(68, 17);
+            this.checkBoxIsCorrectAnswer3.TabIndex = 11;
+            this.checkBoxIsCorrectAnswer3.Text = "IsCorrect";
+            this.checkBoxIsCorrectAnswer3.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxIsCorrectAnswer4
+            // 
+            this.checkBoxIsCorrectAnswer4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.checkBoxIsCorrectAnswer4.AutoSize = true;
+            this.checkBoxIsCorrectAnswer4.Location = new System.Drawing.Point(263, 118);
+            this.checkBoxIsCorrectAnswer4.Name = "checkBoxIsCorrectAnswer4";
+            this.checkBoxIsCorrectAnswer4.Size = new System.Drawing.Size(68, 17);
+            this.checkBoxIsCorrectAnswer4.TabIndex = 10;
+            this.checkBoxIsCorrectAnswer4.Text = "IsCorrect";
+            this.checkBoxIsCorrectAnswer4.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxIsCorrectAnswer2
+            // 
+            this.checkBoxIsCorrectAnswer2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.checkBoxIsCorrectAnswer2.AutoSize = true;
+            this.checkBoxIsCorrectAnswer2.Location = new System.Drawing.Point(263, 66);
+            this.checkBoxIsCorrectAnswer2.Name = "checkBoxIsCorrectAnswer2";
+            this.checkBoxIsCorrectAnswer2.Size = new System.Drawing.Size(68, 17);
+            this.checkBoxIsCorrectAnswer2.TabIndex = 9;
+            this.checkBoxIsCorrectAnswer2.Text = "IsCorrect";
+            this.checkBoxIsCorrectAnswer2.UseVisualStyleBackColor = true;
+            // 
+            // textBoxAnswer4
+            // 
+            this.textBoxAnswer4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxAnswer4.Location = new System.Drawing.Point(3, 116);
+            this.textBoxAnswer4.Name = "textBoxAnswer4";
+            this.textBoxAnswer4.Size = new System.Drawing.Size(254, 20);
+            this.textBoxAnswer4.TabIndex = 8;
+            // 
+            // textBoxAnswer3
+            // 
+            this.textBoxAnswer3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxAnswer3.Location = new System.Drawing.Point(3, 90);
+            this.textBoxAnswer3.Name = "textBoxAnswer3";
+            this.textBoxAnswer3.Size = new System.Drawing.Size(254, 20);
+            this.textBoxAnswer3.TabIndex = 6;
+            // 
+            // textBoxAnswer1
+            // 
+            this.textBoxAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxAnswer1.Location = new System.Drawing.Point(3, 38);
+            this.textBoxAnswer1.Name = "textBoxAnswer1";
+            this.textBoxAnswer1.Size = new System.Drawing.Size(254, 20);
+            this.textBoxAnswer1.TabIndex = 4;
+            // 
+            // textBoxAnswer2
+            // 
+            this.textBoxAnswer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxAnswer2.Location = new System.Drawing.Point(3, 64);
+            this.textBoxAnswer2.Name = "textBoxAnswer2";
+            this.textBoxAnswer2.Size = new System.Drawing.Size(254, 20);
+            this.textBoxAnswer2.TabIndex = 2;
             // 
             // buttonAdd
             // 
@@ -122,122 +238,6 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // labelAnswer2
-            // 
-            this.labelAnswer2.AutoSize = true;
-            this.labelAnswer2.Location = new System.Drawing.Point(3, 67);
-            this.labelAnswer2.Name = "labelAnswer2";
-            this.labelAnswer2.Size = new System.Drawing.Size(51, 13);
-            this.labelAnswer2.TabIndex = 1;
-            this.labelAnswer2.Text = "Answer 2";
-            // 
-            // textBoxAnswer2
-            // 
-            this.textBoxAnswer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAnswer2.Location = new System.Drawing.Point(3, 64);
-            this.textBoxAnswer2.Name = "textBoxAnswer2";
-            this.textBoxAnswer2.Size = new System.Drawing.Size(254, 20);
-            this.textBoxAnswer2.TabIndex = 2;
-            // 
-            // labelAnswer1
-            // 
-            this.labelAnswer1.AutoSize = true;
-            this.labelAnswer1.Location = new System.Drawing.Point(3, 38);
-            this.labelAnswer1.Name = "labelAnswer1";
-            this.labelAnswer1.Size = new System.Drawing.Size(51, 13);
-            this.labelAnswer1.TabIndex = 3;
-            this.labelAnswer1.Text = "Answer 1";
-            // 
-            // textBoxAnswer1
-            // 
-            this.textBoxAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAnswer1.Location = new System.Drawing.Point(3, 38);
-            this.textBoxAnswer1.Name = "textBoxAnswer1";
-            this.textBoxAnswer1.Size = new System.Drawing.Size(254, 20);
-            this.textBoxAnswer1.TabIndex = 4;
-            // 
-            // labelAnswer3
-            // 
-            this.labelAnswer3.AutoSize = true;
-            this.labelAnswer3.Location = new System.Drawing.Point(3, 93);
-            this.labelAnswer3.Name = "labelAnswer3";
-            this.labelAnswer3.Size = new System.Drawing.Size(51, 13);
-            this.labelAnswer3.TabIndex = 5;
-            this.labelAnswer3.Text = "Answer 3";
-            // 
-            // textBoxAnswer3
-            // 
-            this.textBoxAnswer3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAnswer3.Location = new System.Drawing.Point(3, 90);
-            this.textBoxAnswer3.Name = "textBoxAnswer3";
-            this.textBoxAnswer3.Size = new System.Drawing.Size(254, 20);
-            this.textBoxAnswer3.TabIndex = 6;
-            // 
-            // labelAnswer4
-            // 
-            this.labelAnswer4.AutoSize = true;
-            this.labelAnswer4.Location = new System.Drawing.Point(3, 119);
-            this.labelAnswer4.Name = "labelAnswer4";
-            this.labelAnswer4.Size = new System.Drawing.Size(51, 13);
-            this.labelAnswer4.TabIndex = 7;
-            this.labelAnswer4.Text = "Answer 4";
-            // 
-            // textBoxAnswer4
-            // 
-            this.textBoxAnswer4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAnswer4.Location = new System.Drawing.Point(3, 116);
-            this.textBoxAnswer4.Name = "textBoxAnswer4";
-            this.textBoxAnswer4.Size = new System.Drawing.Size(254, 20);
-            this.textBoxAnswer4.TabIndex = 8;
-            // 
-            // checkBoxIsCorrectAnswer2
-            // 
-            this.checkBoxIsCorrectAnswer2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.checkBoxIsCorrectAnswer2.AutoSize = true;
-            this.checkBoxIsCorrectAnswer2.Location = new System.Drawing.Point(263, 66);
-            this.checkBoxIsCorrectAnswer2.Name = "checkBoxIsCorrectAnswer2";
-            this.checkBoxIsCorrectAnswer2.Size = new System.Drawing.Size(68, 17);
-            this.checkBoxIsCorrectAnswer2.TabIndex = 9;
-            this.checkBoxIsCorrectAnswer2.Text = "IsCorrect";
-            this.checkBoxIsCorrectAnswer2.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsCorrectAnswer4
-            // 
-            this.checkBoxIsCorrectAnswer4.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.checkBoxIsCorrectAnswer4.AutoSize = true;
-            this.checkBoxIsCorrectAnswer4.Location = new System.Drawing.Point(263, 118);
-            this.checkBoxIsCorrectAnswer4.Name = "checkBoxIsCorrectAnswer4";
-            this.checkBoxIsCorrectAnswer4.Size = new System.Drawing.Size(68, 17);
-            this.checkBoxIsCorrectAnswer4.TabIndex = 10;
-            this.checkBoxIsCorrectAnswer4.Text = "IsCorrect";
-            this.checkBoxIsCorrectAnswer4.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsCorrectAnswer3
-            // 
-            this.checkBoxIsCorrectAnswer3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.checkBoxIsCorrectAnswer3.AutoSize = true;
-            this.checkBoxIsCorrectAnswer3.Location = new System.Drawing.Point(263, 92);
-            this.checkBoxIsCorrectAnswer3.Name = "checkBoxIsCorrectAnswer3";
-            this.checkBoxIsCorrectAnswer3.Size = new System.Drawing.Size(68, 17);
-            this.checkBoxIsCorrectAnswer3.TabIndex = 11;
-            this.checkBoxIsCorrectAnswer3.Text = "IsCorrect";
-            this.checkBoxIsCorrectAnswer3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxIsCorrectAnswer1
-            // 
-            this.checkBoxIsCorrectAnswer1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.checkBoxIsCorrectAnswer1.AutoSize = true;
-            this.checkBoxIsCorrectAnswer1.Location = new System.Drawing.Point(263, 40);
-            this.checkBoxIsCorrectAnswer1.Name = "checkBoxIsCorrectAnswer1";
-            this.checkBoxIsCorrectAnswer1.Size = new System.Drawing.Size(68, 17);
-            this.checkBoxIsCorrectAnswer1.TabIndex = 12;
-            this.checkBoxIsCorrectAnswer1.Text = "IsCorrect";
-            this.checkBoxIsCorrectAnswer1.UseVisualStyleBackColor = true;
-            // 
             // AddQuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,7 +247,7 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.splitContainer1);
             this.Name = "AddQuestionForm";
-            this.Text = "AddGroupForm";
+            this.Text = "AddGroup";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

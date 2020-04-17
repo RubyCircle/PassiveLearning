@@ -139,7 +139,7 @@
             this.listBoxQuestionGroups.Name = "listBoxQuestionGroups";
             this.listBoxQuestionGroups.Size = new System.Drawing.Size(160, 392);
             this.listBoxQuestionGroups.TabIndex = 0;
-            this.listBoxQuestionGroups.SelectedValueChanged += new System.EventHandler(this.listBoxQuestionGroups_SelectedValueChanged);
+            this.listBoxQuestionGroups.SelectedValueChanged += new System.EventHandler(this.ListBoxQuestionGroups_SelectedValueChanged);
             // 
             // menuStrip1
             // 
@@ -172,28 +172,28 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.addToolStripMenuItem.Text = "Add Group";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.AddGroup_Click);
             // 
             // removeGroupToolStripMenuItem
             // 
             this.removeGroupToolStripMenuItem.Name = "removeGroupToolStripMenuItem";
-            this.removeGroupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeGroupToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.removeGroupToolStripMenuItem.Text = "Remove Group";
             this.removeGroupToolStripMenuItem.Click += new System.EventHandler(this.RemoveGroup_Click);
             // 
             // addQuestionToolStripMenuItem
             // 
             this.addQuestionToolStripMenuItem.Name = "addQuestionToolStripMenuItem";
-            this.addQuestionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addQuestionToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.addQuestionToolStripMenuItem.Text = "Add Question";
             this.addQuestionToolStripMenuItem.Click += new System.EventHandler(this.AddQuestion_Click);
             // 
             // removeQuestionToolStripMenuItem
             // 
             this.removeQuestionToolStripMenuItem.Name = "removeQuestionToolStripMenuItem";
-            this.removeQuestionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeQuestionToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.removeQuestionToolStripMenuItem.Text = "Remove Question";
             this.removeQuestionToolStripMenuItem.Click += new System.EventHandler(this.RemoveQuestion_Click);
             // 

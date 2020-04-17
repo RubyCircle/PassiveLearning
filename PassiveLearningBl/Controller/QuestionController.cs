@@ -9,7 +9,7 @@ namespace PassiveLearningBl.Controller
     public class QuestionController
     {
         public List<QuestionsGroup> QuestionsGroups { get; set; }
-        public double Delay { get; set; } = 3000; // Seconds
+        public double Delay { get; set; } // Seconds
         public event EventHandler<QuestionEventArgs> DisplayQuestion;
 
         private bool IsActive { get => !Token.IsCancellationRequested; }
@@ -17,13 +17,15 @@ namespace PassiveLearningBl.Controller
         private CancellationTokenSource TokenSource;
         private CancellationToken Token;
 
-        public QuestionController()
+        public QuestionController(double delay = 3000)
         {
             QuestionsGroups = new List<QuestionsGroup>();
+            Delay = delay;
         }
-        public QuestionController(List<QuestionsGroup> questionsGroups)
+        public QuestionController(List<QuestionsGroup> questionsGroups,double delay = 3000)
         {
             QuestionsGroups = questionsGroups ?? throw new ArgumentNullException(nameof(questionsGroups));
+            Delay = delay;
         }
 
         public void Start()
@@ -42,7 +44,7 @@ namespace PassiveLearningBl.Controller
             while (IsActive)
             {
                 Thread.Sleep(1000);
-                if (DisplayTime > DateTime.Now)
+                if (DisplayTime < DateTime.Now)
                 {
                     var newQuestion = GetRandomQuestion();
                     if (newQuestion != null)
@@ -69,7 +71,7 @@ namespace PassiveLearningBl.Controller
             }
             if (activeQuestions.Count > 0)
             {
-                return activeQuestions[rnd.Next()];
+                return activeQuestions[rnd.Next(activeQuestions.Count)];
             }
             return null;
         }
